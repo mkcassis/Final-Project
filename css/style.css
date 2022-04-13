@@ -1,0 +1,225 @@
+/* Body Stuff */
+
+body {
+    background-color: whitesmoke;
+    font-size: 16vmin;
+    font-weight: normal;
+    color: rgba(50, 50, 50, 1);
+    font-family: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Neue Regular", Icons;
+    font-style: normal;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
+
+
+/* Header */
+
+.header_text {
+    text-align: left;
+    flex: 1 0 auto;
+    max-width: 100%;
+    padding-top: 0.8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.left_nav {
+    padding: 0;
+    display: block;
+    width: 66.66667%;
+    box-sizing: border-box;
+}
+
+.right_nav {
+    display: block;
+    color: rgba(50, 50, 50, 1);
+    line-height: 1.0rem;
+    color: rgba(50, 50, 50, 1);
+}
+
+
+/* Link Styling / Format */
+
+a {
+    color: rgba(50, 50, 50, 1);
+    border-bottom-width: 0em;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+
+.header_text {
+    color: black;
+    font-size: xx-large;
+}
+
+
+/* Image Hover */
+
+.column img:hover {
+    transform: scale(2.5);
+}
+
+
+/* Slideshow */
+
+.container_images {
+    display: flex;
+    align-content: stretch;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 10%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transition: transform .7s ease-in-out;
+}
+
+/**/
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .column img:hover {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 90%;
+        max-width: 90%;
+    }
+
+}
+
+/*Info Page*/
+
+.container_info {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.info_text {
+    font-size: 40%;
+    text-align: center;
+}
+
+p.clicktocontact {
+    font-size: medium
+}
+
+/* Modal on InfoSite */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    font-size: xx-large;
+}
+
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/*Closing Modal*/
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.info_photo {
+    padding-left: 30%;
+    padding-right: 30%;
+    cursor: pointer;
+}
+
+/* Misc */
+
+html {
+    scroll-behavior: smooth;
+}
